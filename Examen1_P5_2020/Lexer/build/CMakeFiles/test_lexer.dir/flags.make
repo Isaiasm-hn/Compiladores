@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/build -I/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer -I/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/.. 
+CXX_INCLUDES = -I/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/build -I/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests -I/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests/.. 
 

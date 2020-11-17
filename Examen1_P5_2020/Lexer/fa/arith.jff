@@ -24,90 +24,60 @@
 			<y>252.0</y>
 		</state>
 		<state id="5" name="q5">
-			<x>313.0</x>
-			<y>318.0</y>
+			<x>300.0</x>
+			<y>-5.0</y>
 		</state>
 		<state id="6" name="q6">
-			<x>308.0</x>
-			<y>376.0</y>
+			<x>305.0</x>
+			<y>46.0</y>
 		</state>
 		<state id="7" name="q7">
-			<x>94.0</x>
-			<y>284.0</y>
+			<x>97.0</x>
+			<y>354.0</y>
 			<label>Token::Eof</label>
 			<final/>
 		</state>
 		<state id="8" name="q8">
 			<x>496.0</x>
 			<y>98.0</y>
-			<label>Token::Suma</label>
+			<label>Token::OpAdd</label>
 			<final/>
 		</state>
 		<state id="9" name="q9">
 			<x>487.0</x>
 			<y>146.0</y>
-			<label>Token::Resta</label>
+			<label>Token::OpSub</label>
 			<final/>
 		</state>
 		<state id="10" name="q10">
 			<x>489.0</x>
 			<y>206.0</y>
-			<label>Token::Multiplicacion</label>
+			<label>Token::OpMul</label>
 			<final/>
 		</state>
 		<state id="11" name="q11">
 			<x>487.0</x>
 			<y>261.0</y>
-			<label>Token::Division</label>
+			<label>Token::OpDiv</label>
 			<final/>
 		</state>
 		<state id="12" name="q12">
-			<x>475.0</x>
-			<y>332.0</y>
-			<label>Token::Oparentesis</label>
+			<x>600.0</x>
+			<y>-3.0</y>
+			<label>Token::OpenPar</label>
 			<final/>
 		</state>
 		<state id="13" name="q13">
-			<x>459.0</x>
-			<y>399.0</y>
-			<label>Token::Cparentesis</label>
+			<x>600.0</x>
+			<y>53.0</y>
+			<label>Token::ClosePar</label>
 			<final/>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
-			<from>1</from>
-			<to>8</to>
-			<read/>
-		</transition>
-		<transition>
 			<from>0</from>
-			<to>7</to>
-			<read>EOF</read>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>13</to>
-			<read/>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>+</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>5</to>
-			<read>(</read>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>9</to>
-			<read/>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>4</to>
-			<read>/</read>
+			<to>6</to>
+			<read>)</read>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -115,13 +85,13 @@
 			<read>*</read>
 		</transition>
 		<transition>
-			<from>4</from>
-			<to>11</to>
-			<read/>
+			<from>0</from>
+			<to>4</to>
+			<read>/</read>
 		</transition>
 		<transition>
-			<from>5</from>
-			<to>12</to>
+			<from>1</from>
+			<to>8</to>
 			<read/>
 		</transition>
 		<transition>
@@ -130,19 +100,49 @@
 			<read>-</read>
 		</transition>
 		<transition>
+			<from>5</from>
+			<to>12</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>11</to>
+			<read/>
+		</transition>
+		<transition>
 			<from>3</from>
 			<to>10</to>
 			<read/>
 		</transition>
 		<transition>
 			<from>0</from>
-			<to>6</to>
-			<read>)</read>
+			<to>5</to>
+			<read>(</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>13</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>9</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>7</to>
+			<read>EOF</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>+</read>
 		</transition>
 		<note>
 			<text>Name:arith</text>
-			<x>70.0</x>
-			<y>39.0</y>
+			<x>59.0</x>
+			<y>65.0</y>
 		</note>
 	</automaton>
 </structure>

@@ -213,7 +213,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 test_lexer_BINARY_DIR:STATIC=/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/build
 
 //Value Computed by CMake
-test_lexer_SOURCE_DIR:STATIC=/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer
+test_lexer_SOURCE_DIR:STATIC=/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests
 
 
 ########################
@@ -302,7 +302,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

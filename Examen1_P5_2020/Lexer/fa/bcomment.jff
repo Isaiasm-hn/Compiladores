@@ -3,45 +3,61 @@
 	<automaton>
 		<!--The list of states.-->
 		<state id="0" name="q0">
-			<x>51.0</x>
-			<y>113.0</y>
+			<x>143.0</x>
+			<y>207.0</y>
 			<initial/>
 		</state>
 		<state id="1" name="q1">
-			<x>216.0</x>
-			<y>120.0</y>
+			<x>493.0</x>
+			<y>217.0</y>
 		</state>
 		<state id="2" name="q2">
-			<x>374.0</x>
-			<y>122.0</y>
+			<x>793.0</x>
+			<y>218.0</y>
 		</state>
 		<state id="3" name="q3">
-			<x>509.0</x>
-			<y>124.0</y>
+			<x>891.0</x>
+			<y>365.0</y>
 			<label>Token::ComentarioBloque</label>
 			<final/>
 		</state>
 		<state id="4" name="q4">
-			<x>108.0</x>
-			<y>191.0</y>
+			<x>144.0</x>
+			<y>369.0</y>
 			<label>Token::Eof</label>
 			<final/>
+		</state>
+		<state id="5" name="q5">
+			<x>292.0</x>
+			<y>212.0</y>
+		</state>
+		<state id="6" name="q6">
+			<x>601.0</x>
+			<y>217.0</y>
+		</state>
+		<state id="7" name="q7">
+			<x>702.0</x>
+			<y>221.0</y>
+		</state>
+		<state id="8" name="q8">
+			<x>375.0</x>
+			<y>215.0</y>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
 			<from>1</from>
 			<to>1</to>
-			<read>SPACE</read>
+			<read>!</read>
 		</transition>
 		<transition>
-			<from>0</from>
-			<to>4</to>
-			<read>EOF</read>
-		</transition>
-		<transition>
-			<from>0</from>
+			<from>8</from>
 			<to>1</to>
-			<read>/!</read>
+			<read>!</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>5</to>
+			<read>/</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -49,9 +65,34 @@
 			<read>[0-9]</read>
 		</transition>
 		<transition>
+			<from>7</from>
+			<to>2</to>
+			<read>/</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>[a-z]</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>[A-Z]</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>8</to>
+			<read>!</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>/</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>SPACE</read>
 		</transition>
 		<transition>
 			<from>2</from>
@@ -60,18 +101,23 @@
 		</transition>
 		<transition>
 			<from>1</from>
-			<to>1</to>
-			<read>[A-Z]</read>
+			<to>6</to>
+			<read>!</read>
 		</transition>
 		<transition>
-			<from>1</from>
-			<to>2</to>
-			<read>!!/</read>
+			<from>0</from>
+			<to>4</to>
+			<read>EOF</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>7</to>
+			<read>!</read>
 		</transition>
 		<note>
 			<text>Name:bcomment</text>
-			<x>30.0</x>
-			<y>54.0</y>
+			<x>103.0</x>
+			<y>98.0</y>
 		</note>
 	</automaton>
 </structure>

@@ -1,4 +1,4 @@
-# Install script for directory: /home/fernando/Compiladores-I/Examen1_P5_2020/Lexer
+# Install script for directory: /home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

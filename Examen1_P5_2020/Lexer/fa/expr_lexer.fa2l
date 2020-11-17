@@ -1,0 +1,27 @@
+#include "expr_lexer.h"
+
+/*!fa2lexer
+    %option generate.tokens = true;
+    %file "start.jff";
+    %file "number.jff";
+    %file "arith.jff";
+    %file "identifier.jff";
+  
+
+    %generate.state_enum(State);
+*/
+
+Token ExprLexer::getNextToken()
+{
+    text = "";
+/*!fa2lexer
+    %generate.lexer(text);
+*/
+}
+
+const char *ExprLexer::tokenToString(Token tk)
+{
+/*!fa2lexer
+    %generate.toString(tk);
+*/    
+}

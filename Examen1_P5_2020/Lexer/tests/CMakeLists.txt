@@ -12,11 +12,11 @@ add_custom_command (
     COMMAND ${FA2LEXER} --src expr_lexer.cpp --hdr expr_tokens.h --tpl ${PROJECT_SOURCE_DIR}/../fa/expr_lexer.fa2l
     MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/../fa/expr_lexer.fa2l
     DEPENDS ${PROJECT_SOURCE_DIR}/../fa/start.jff
-            ${PROJECT_SOURCE_DIR}/../fa/arith.jff
-            ${PROJECT_SOURCE_DIR}/../fa/bcomment.jff  
-            ${PROJECT_SOURCE_DIR}/../fa/lcomment.jff 
             ${PROJECT_SOURCE_DIR}/../fa/number.jff
             ${PROJECT_SOURCE_DIR}/../fa/identifier.jff
+            ${PROJECT_SOURCE_DIR}/../fa/arith.jff
+          
+            
   )
 
 set_source_files_properties(

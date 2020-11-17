@@ -3,54 +3,43 @@
 	<automaton>
 		<!--The list of states.-->
 		<state id="0" name="q0">
-			<x>61.0</x>
-			<y>134.0</y>
+			<x>70.0</x>
+			<y>128.0</y>
 			<initial/>
 		</state>
 		<state id="1" name="q1">
-			<x>222.0</x>
+			<x>356.0</x>
 			<y>137.0</y>
 		</state>
 		<state id="2" name="q2">
-			<x>229.0</x>
-			<y>233.0</y>
+			<x>191.0</x>
+			<y>243.0</y>
 		</state>
 		<state id="3" name="q3">
-			<x>362.0</x>
-			<y>233.0</y>
+			<x>395.0</x>
+			<y>263.0</y>
 		</state>
 		<state id="4" name="q4">
-			<x>516.0</x>
-			<y>135.0</y>
-			<label>Token::Entero</label>
+			<x>536.0</x>
+			<y>189.0</y>
+			<label>Token::Number</label>
 			<final/>
 		</state>
 		<state id="5" name="q5">
-			<x>514.0</x>
-			<y>232.0</y>
-			<label>Token::Decimal</label>
-			<final/>
-		</state>
-		<state id="6" name="q6">
-			<x>102.0</x>
-			<y>285.0</y>
+			<x>74.0</x>
+			<y>312.0</y>
 			<label>Token::Eof</label>
 			<final/>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
 			<from>0</from>
-			<to>1</to>
-			<read>[0-9]</read>
+			<to>5</to>
+			<read>EOF</read>
 		</transition>
 		<transition>
 			<from>1</from>
 			<to>1</to>
-			<read>[0-9]</read>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>2</to>
 			<read>[0-9]</read>
 		</transition>
 		<transition>
@@ -59,19 +48,19 @@
 			<read>[0-9]</read>
 		</transition>
 		<transition>
-			<from>0</from>
-			<to>2</to>
+			<from>2</from>
+			<to>3</to>
 			<read>[0-9]</read>
 		</transition>
 		<transition>
 			<from>0</from>
-			<to>6</to>
-			<read>EOF</read>
+			<to>1</to>
+			<read>[0-9]</read>
 		</transition>
 		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read>.</read>
+			<from>3</from>
+			<to>4</to>
+			<read/>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -79,9 +68,9 @@
 			<read/>
 		</transition>
 		<transition>
-			<from>3</from>
-			<to>5</to>
-			<read/>
+			<from>1</from>
+			<to>2</to>
+			<read>.</read>
 		</transition>
 		<note>
 			<text>Name: Number</text>

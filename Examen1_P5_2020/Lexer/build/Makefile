@@ -48,7 +48,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fernando/Compiladores-I/Examen1_P5_2020/Lexer
+CMAKE_SOURCE_DIR = /home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/build

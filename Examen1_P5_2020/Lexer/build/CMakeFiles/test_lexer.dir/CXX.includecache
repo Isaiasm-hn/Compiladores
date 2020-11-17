@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/build/expr_lexer.cpp
+expr_lexer.h
+/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/build/expr_lexer.h
+
+/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/expr_lexer.h
+iostream
+-
+string
+-
+istream
+-
+expr_tokens.h
+/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/expr_tokens.h
+
+expr_tokens.h
+

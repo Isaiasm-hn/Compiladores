@@ -3,54 +3,88 @@
 	<automaton>
 		<!--The list of states.-->
 		<state id="0" name="q0">
-			<x>57.0</x>
-			<y>138.0</y>
+			<x>92.0</x>
+			<y>113.0</y>
 			<initial/>
-			<final/>
 		</state>
 		<state id="1" name="q1">
-			<x>237.0</x>
-			<y>136.0</y>
+			<x>235.0</x>
+			<y>113.0</y>
 		</state>
 		<state id="2" name="q2">
-			<x>402.0</x>
-			<y>141.0</y>
+			<x>595.0</x>
+			<y>106.0</y>
 		</state>
 		<state id="3" name="q3">
-			<x>558.0</x>
-			<y>140.0</y>
-			<label>Token::Identificador</label>
+			<x>705.0</x>
+			<y>97.0</y>
+			<label>Token::Ident</label>
 			<final/>
 		</state>
 		<state id="4" name="q4">
-			<x>145.0</x>
-			<y>250.0</y>
+			<x>356.0</x>
+			<y>214.0</y>
 		</state>
 		<state id="5" name="q5">
-			<x>278.0</x>
-			<y>246.0</y>
+			<x>475.0</x>
+			<y>211.0</y>
 		</state>
 		<state id="6" name="q6">
-			<x>62.0</x>
-			<y>263.0</y>
+			<x>94.0</x>
+			<y>267.0</y>
 			<label>Token::Eof</label>
 			<final/>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
 			<from>1</from>
-			<to>2</to>
-			<read>_</read>
+			<to>4</to>
+			<read>[0-9]</read>
 		</transition>
 		<transition>
-			<from>1</from>
+			<from>4</from>
 			<to>4</to>
 			<read>[0-9]</read>
 		</transition>
 		<transition>
 			<from>5</from>
+			<to>5</to>
+			<read>[0-9]</read>
+		</transition>
+		<transition>
+			<from>2</from>
 			<to>2</to>
-			<read>_</read>
+			<read>[0-9]</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>[A-Z]</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>[a-z]</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>[A-Z]</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>[0-9]</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>[a-z]</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>[A-Z]</read>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -63,56 +97,6 @@
 			<read>[a-z]</read>
 		</transition>
 		<transition>
-			<from>4</from>
-			<to>4</to>
-			<read>[0-9]</read>
-		</transition>
-		<transition>
-			<from>5</from>
-			<to>5</to>
-			<read>[0-9]</read>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>2</to>
-			<read>[a-z]</read>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>2</to>
-			<read>[A-Z]</read>
-		</transition>
-		<transition>
-			<from>4</from>
-			<to>5</to>
-			<read>.</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>[A-Z]</read>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read/>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>2</to>
-			<read>[A-Z]</read>
-		</transition>
-		<transition>
-			<from>5</from>
-			<to>2</to>
-			<read>[A-Z]</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>6</to>
-			<read>EOF</read>
-		</transition>
-		<transition>
 			<from>0</from>
 			<to>1</to>
 			<read>_</read>
@@ -120,12 +104,27 @@
 		<transition>
 			<from>1</from>
 			<to>2</to>
-			<read>[a-z]</read>
+			<read>_</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>6</to>
+			<read>EOF</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>5</to>
+			<read>.</read>
 		</transition>
 		<transition>
 			<from>5</from>
 			<to>2</to>
-			<read>[a-z]</read>
+			<read>[0-9]</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read/>
 		</transition>
 		<transition>
 			<from>2</from>
@@ -135,7 +134,7 @@
 		<note>
 			<text>Name:identifier</text>
 			<x>41.0</x>
-			<y>10.0</y>
+			<y>32.0</y>
 		</note>
 	</automaton>
 </structure>
