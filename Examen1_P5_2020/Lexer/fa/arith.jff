@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>89.0</x>
+			<y>99.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>303.0</x>
+			<y>94.0</y>
+		</state>
+		<state id="2" name="q2">
+			<x>303.0</x>
+			<y>149.0</y>
+		</state>
+		<state id="3" name="q3">
+			<x>303.0</x>
+			<y>198.0</y>
+		</state>
+		<state id="4" name="q4">
+			<x>300.0</x>
+			<y>252.0</y>
+		</state>
+		<state id="5" name="q5">
+			<x>313.0</x>
+			<y>318.0</y>
+		</state>
+		<state id="6" name="q6">
+			<x>308.0</x>
+			<y>376.0</y>
+		</state>
+		<state id="7" name="q7">
+			<x>94.0</x>
+			<y>284.0</y>
+			<label>Token::Eof</label>
+			<final/>
+		</state>
+		<state id="8" name="q8">
+			<x>496.0</x>
+			<y>98.0</y>
+			<label>Token::Suma</label>
+			<final/>
+		</state>
+		<state id="9" name="q9">
+			<x>487.0</x>
+			<y>146.0</y>
+			<label>Token::Resta</label>
+			<final/>
+		</state>
+		<state id="10" name="q10">
+			<x>489.0</x>
+			<y>206.0</y>
+			<label>Token::Multiplicacion</label>
+			<final/>
+		</state>
+		<state id="11" name="q11">
+			<x>487.0</x>
+			<y>261.0</y>
+			<label>Token::Division</label>
+			<final/>
+		</state>
+		<state id="12" name="q12">
+			<x>475.0</x>
+			<y>332.0</y>
+			<label>Token::Oparentesis</label>
+			<final/>
+		</state>
+		<state id="13" name="q13">
+			<x>459.0</x>
+			<y>399.0</y>
+			<label>Token::Cparentesis</label>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>1</from>
+			<to>8</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>7</to>
+			<read>EOF</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>13</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>+</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>5</to>
+			<read>(</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>9</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>4</to>
+			<read>/</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>3</to>
+			<read>*</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>11</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>12</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>-</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>10</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>6</to>
+			<read>)</read>
+		</transition>
+		<note>
+			<text>Name:arith</text>
+			<x>70.0</x>
+			<y>39.0</y>
+		</note>
+	</automaton>
+</structure>

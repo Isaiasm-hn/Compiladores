@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>152.0</x>
+			<y>129.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>276.0</x>
+			<y>128.0</y>
+			<label>Token::Eof</label>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>-EOL</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>EOF</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>-SPACE</read>
+		</transition>
+		<note>
+			<text>Name: start</text>
+			<x>151.0</x>
+			<y>31.0</y>
+		</note>
+	</automaton>
+</structure>
