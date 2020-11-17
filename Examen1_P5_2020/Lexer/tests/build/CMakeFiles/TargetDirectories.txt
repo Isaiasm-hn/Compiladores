@@ -1,0 +1,3 @@
+/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests/build/CMakeFiles/rebuild_cache.dir
+/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests/build/CMakeFiles/edit_cache.dir
+/home/fernando/Compiladores-I/Examen1_P5_2020/Lexer/tests/build/CMakeFiles/test_lexer.dir
