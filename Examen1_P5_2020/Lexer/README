@@ -1,0 +1,14 @@
+Token soportados por el lexer
+=============================
+
+1. Numeros (enteros y decimales)
+2. Identificadores los cuales pueden comenzar con $, _ o cualquier letra.
+   Luego pueden ir seguidos de _, numeros decimales o cualquier letra.
+3. Comentarios de linea que comienzan con /!
+4. Comentarios de bloque que comienzan con /!! y terminan con !!/
+5. Operador de suma +
+5. Operador de resta -
+5. Operador de multiplicacion *
+5. Operador de division /
+6. Parentesis abierto (
+7. Parentesis cerrado )
