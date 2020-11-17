@@ -33,4 +33,5 @@ private:
     std::string text;
     std::istream& input;
 };
+
 #endif

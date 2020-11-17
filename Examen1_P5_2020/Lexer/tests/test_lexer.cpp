@@ -167,6 +167,7 @@ TEST_CASE("Complex expression with real numbers")
     CHECK(tk == Token::Eof);
 }
 
+
 TEST_CASE("Line comments")
 {
     std::istringstream in;

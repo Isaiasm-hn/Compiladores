@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(FA2LEXER "fa2lexer")
 
+
 # Run fa2lexer to generate the lexer
 add_custom_command (
     OUTPUT expr_tokens.h expr_lexer.cpp

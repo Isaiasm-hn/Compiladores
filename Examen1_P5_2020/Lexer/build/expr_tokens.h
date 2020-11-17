@@ -12,4 +12,5 @@ enum class Token {
     OpMul,
     OpDiv,
 };
+
 #endif

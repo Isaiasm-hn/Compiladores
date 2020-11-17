@@ -20,6 +20,7 @@ enum class State {
     identifier_q5,
 };
 
+
 Token ExprLexer::getNextToken()
 {
     text = "";
